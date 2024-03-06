@@ -1,0 +1,714 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arvo", serif;
+}
+
+/* Global Variables */
+:root {
+  --montstrat-font: "Montserrat", sans-serif;
+  --open-sans-font: "Open Sans", sans-serif;
+  --black-titles-font-color: #333333;
+  --subtitle-titles-font-color: #9fa3a7;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "iphone iphone how-to-use how-to-use"
+    "keyboard imac imac icloud"
+    "games best-choice best-choice icloud"
+    "twitter popular display display";
+}
+
+/* First Cell - Iphone */
+div.iphone {
+  display: flex;
+  flex-flow: row nowrap;
+  grid-area: iphone;
+  background-color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline: 30px;
+}
+
+div.iphone div.iphon-content {
+  width: 225px;
+}
+
+div.iphon-content h4 {
+  font-family: var(--montstrat-font);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--subtitle-titles-font-color);
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+div.iphon-content h3 {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--black-titles-font-color);
+  padding-bottom: 30px;
+  line-height: 32px;
+}
+
+div.iphon-content p {
+  font-family: var(--open-sans-font);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--subtitle-titles-font-color);
+  line-height: 26px;
+}
+
+div.iphone img {
+  display: block;
+  width: 250px;
+  margin-top: 40px;
+}
+
+/* Second Cell - How to use */
+div.how-to-use {
+  grid-area: how-to-use;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+div.how-to-use h4 {
+  font-family: var(--montstrat-font);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--subtitle-titles-font-color);
+  line-height: 20px;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+div.how-to-use h2 {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--black-titles-font-color);
+  line-height: 60px;
+  padding-bottom: 20px;
+  max-width: 550px;
+}
+
+div.how-to-use a {
+  font-family: var(--open-sans-font);
+  font-size: 14px;
+  color: #27b9c2;
+  line-height: 26px;
+}
+
+/* Thired Cell - keyboard */
+div.keyboard {
+  grid-area: keyboard;
+  background-color: #f05638;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+div.keyboard img {
+  width: 300px;
+  display: block;
+}
+
+div.keyboard h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fffbfb;
+  line-height: 32px;
+  padding-bottom: 20px;
+  width: 200px;
+}
+
+div.keyboard a {
+  font-family: var(--open-sans-font);
+  font-size: 12px;
+  color: #ffc80a;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Fourth Cell - Imac */
+.imac {
+  grid-area: imac;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 70px 30px 0;
+}
+
+div.imac-title {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+  justify-content: space-between;
+  align-items: start;
+  text-align: left;
+}
+
+div.imac-title h4 {
+  font-family: var(--montstrat-font);
+  font-size: 12px;
+  color: var(--subtitle-titles-font-color);
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 186px;
+}
+
+div.imac-title h2 {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--black-titles-font-color);
+  line-height: 32px;
+  /* width: 186px; */
+  padding-block: 20px;
+}
+
+div.imac-title img {
+  position: relative;
+  display: block;
+  /* right: 110px; */
+  width: 250%;
+  left: -160%;
+  /* align-self: end; */
+}
+
+div.imac div.imac-content {
+  width: 40%;
+}
+
+div.imac-content p {
+  font-family: var(--open-sans-font);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--subtitle-titles-font-color);
+  line-height: 26px;
+  padding-bottom: 20px;
+}
+
+div.imac-content a {
+  font-family: var(--open-sans-font);
+  font-size: 12px;
+  color: #27b9c2;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+/* Fifth Cell - icloud */
+.icloud {
+  grid-area: icloud;
+  background-color: #8f76bc;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* padding-block: 50px; */
+}
+
+div.icloud div.flobby {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #8166b0;
+  border-radius: 50%;
+  width: 373px;
+  height: 373px;
+}
+
+div.flobby div.popular-badge {
+  background-color: #8f76bc;
+  padding: 2px 10px;
+  border-radius: 30px;
+}
+
+div.popular-badge i {
+  color: #ffc80a;
+  font-size: 10px;
+}
+
+div.popular-badge span {
+  font-family: var(--open-sans-font);
+  font-size: 10px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+div.flobby img {
+  display: block;
+  width: 220px;
+  width: 220px;
+  position: relative;
+  left: -8px;
+  margin-top: 10px;
+}
+
+div.flobby h4 {
+  font-family: var(--montstrat-font);
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+div.icloud h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+div.icloud p {
+  width: 80%;
+  max-width: 290px;
+  color: #fff;
+  font-family: var(--open-sans-font);
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+div.icloud a {
+  background-color: #ffc80a;
+  color: #000;
+  font-size: 12px;
+  font-family: var(--open-sans-font);
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+/* Sixth Cell - games */
+.games {
+  grid-area: games;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-block: 60px;
+}
+
+div.games img {
+  display: block;
+  width: 250px;
+  position: relative;
+  left: -20px;
+}
+
+div.games h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--black-titles-font-color);
+}
+
+div.games a {
+  font-family: var(--open-sans-font);
+  font-size: 12px;
+  color: #27b9c2;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+/* Seventh Cell - best choice */
+.best-choice {
+  grid-area: best-choice;
+  background-color: #93b6b7;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: end;
+  align-items: center;
+  background-image: url("../images/5bc2f42d5a5ed97dab707e7e_UX.png");
+  background-position: 50% 100%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+div.best-choice div.best-choice-badge {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  background-color: #fa684f;
+  padding: 0px 10px;
+  font-size: 8px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  border-radius: 5px;
+  font-family: var(--open-sans-font);
+}
+
+div.best-choice p {
+  font-size: 22px;
+  line-height: 32px;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 220px;
+  text-align: center;
+}
+
+div.best-choice img {
+  display: block;
+  width: 90%;
+  position: relative;
+  left: -90px;
+}
+
+/* eighth Cell - twitter */
+.twitter {
+  grid-area: twitter;
+  background-color: #38d5f4;
+}
+
+div.twitter {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* padding-block: 50px; */
+}
+
+div.twitter div.box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-block: 50px;
+  padding-inline: 34px;
+  background-color: #35cfed;
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+div.twitter div.box img {
+  width: 40px;
+}
+
+div.twitter div.box h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* ninth Cell - popular */
+div.popular {
+  grid-area: popular;
+  background-color: #f7f8f9;
+  padding-block: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.popular div.popular-badge {
+  font-family: var(--open-sans-font);
+  background-color: #7bc424;
+  color: #fff;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  font-size: 8px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+div.popular h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  width: 70%;
+  text-align: center;
+}
+
+/* tenth Cell - display */
+.display {
+  grid-area: display;
+  background-color: #2c2c2c;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.display img {
+  width: 260px;
+  display: block;
+  align-self: flex-start;
+  position: relative;
+  left: -80px;
+}
+
+div.display h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #fff;
+  width: 257px;
+}
+
+/* Responsive Style */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "how-to-use how-to-use"
+      "iphone iphone"
+      "keyboard games"
+      "imac imac"
+      "twitter icloud"
+      "best-choice icloud"
+      "popular popular"
+      "display display";
+  }
+
+  .how-to-use {
+    padding-block: 40px;
+  }
+
+  div.how-to-use h2 {
+    max-width: 553px;
+  }
+
+  div.imac-title {
+    max-width: 180px;
+  }
+
+  .icloud {
+    padding: 30px 5% 70px;
+  }
+
+  div.best-choice p {
+    display: block;
+    max-width: 280px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  div.best-choice img {
+    left: -7%;
+  }
+
+  div.display h2 {
+    width: 34%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  div.how-to-use h2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  div.twitter {
+    padding-block: 50px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "how-to-use"
+      "iphone"
+      "keyboard"
+      "games"
+      "imac"
+      "twitter"
+      "best-choice"
+      "icloud"
+      "popular"
+      "display";
+  }
+
+  .how-to-use {
+    grid-area: how-to-use;
+  }
+
+  .iphone {
+    grid-area: iphone;
+  }
+
+  .keyboard {
+    grid-area: keyboard;
+  }
+
+  .games {
+    grid-area: games;
+  }
+
+  .imac {
+    grid-area: imac;
+  }
+
+  .twitter {
+    grid-area: twitter;
+  }
+
+  .best-choice {
+    grid-area: best-choice;
+  }
+
+  .icloud {
+    grid-area: icloud;
+  }
+
+  .popular {
+    grid-area: popular;
+  }
+
+  .display {
+    grid-area: display;
+  }
+
+  div.iphone div.iphon-content {
+    width: 90%;
+  }
+
+  div.iphone {
+    flex-flow: column nowrap;
+    padding: 30px 0 0 0;
+  }
+
+  div.iphone img {
+    position: relative;
+    left: -10px;
+  }
+
+  .keyboard {
+    padding-block: 50px;
+  }
+
+  .imac {
+    flex-flow: column nowrap;
+    padding: 70px 30px 50px;
+  }
+
+  div.imac-title img {
+    left: -115%;
+    width: 200%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  div.imac-title {
+    width: 100%;
+  }
+
+  div.imac div.imac-content {
+    width: 100%;
+  }
+
+  div.imac-title {
+    max-width: none;
+  }
+
+  div.best-choice p {
+    padding-top: 60px;
+    padding-bottom: 35px;
+  }
+
+  .icloud {
+    overflow: visible;
+  }
+
+  .display {
+    flex-flow: column nowrap;
+    padding: 0 20px 30px 20px;
+  }
+
+  div.display h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  div.display img {
+    left: 15px;
+  }
+
+  div.twitter {
+    padding: 0;
+  }
+}
+/* End of Assignment */
